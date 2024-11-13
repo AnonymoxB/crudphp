@@ -106,7 +106,7 @@ if(isset($_POST['simpan'])){ //create
 	<div class="mx-auto">
 		<!-- Untuk memasukkan data -->
 		<div class="card">
-			<h5 class="card-header">Create / Edit Data</h5>
+			<h5 class="card-header text-white bg-primary">Create / Edit Data</h5>
 			<div class="card-body">
 				<?php
 				if($error){
@@ -165,7 +165,7 @@ if(isset($_POST['simpan'])){ //create
 		<div class="card">
 			<h5 class="card-header text-white bg-secondary" >Data Pegawai</h5>
 			<div class="card-body">
-				<table class=" table">
+				<table class=" table table-striped">
 					<thead>
 						<tr>
 							<th scope="col">#</th>
@@ -178,7 +178,7 @@ if(isset($_POST['simpan'])){ //create
 						</tr>
 						<tbody>
 							<?php
-								$sql2 = "select * from pegawai order by id desc";
+								$sql2 = "select * from pegawai order by id asc";
 								$q2 = mysqli_query($koneksi, $sql2);
 								$urut =1;
 								while($r2 = mysqli_fetch_array($q2)){
